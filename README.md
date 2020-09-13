@@ -135,8 +135,6 @@ Once the library is intalled, cmake would be able to find it using
 Requirements will propagate automatically:
   * `Foo::foo` will link automatically,
   * headers can be included by C++ code like `#include <foo/foo.h>`,
-  * `FOO_DEBUG=1` added on Debug,
-  * `FOO_DEBUG=0` added otherwise.
 
 
 ### How to use the library as submodule (using add_subdirectory)?

@@ -4,7 +4,7 @@
 
 void foo_print_version(void)
 {
-  #if (FOO_DEBUG)
+  #ifndef NDEBUG
     const char *m = "Debug";
   #else
     const char *m = "Not debug";

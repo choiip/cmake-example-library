@@ -9,3 +9,5 @@ add_executable(bar bar.cpp)
 
 # add library
 target_link_libraries(bar PRIVATE Foo::foo)
+
+set_target_properties(bar PROPERTIES INSTALL_RPATH "$ORIGIN/../lib64")

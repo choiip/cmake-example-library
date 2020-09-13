@@ -12,14 +12,6 @@ add_library(${PROJECT_NAME}::${LIBRARY_NAME} ALIAS ${LIBRARY_NAME})
 # C++11
 target_compile_features(${LIBRARY_NAME} PUBLIC cxx_std_11)
 
-# Add definitions for targets
-# Values:
-#   - Debug  : -DFOO_DEBUG=1
-#   - Release: -DFOO_DEBUG=0
-#   - others : -DFOO_DEBUG=0
-target_compile_definitions(${LIBRARY_NAME} PUBLIC
-  "${PROJECT_NAME_UPPERCASE}_DEBUG=$<CONFIG:Debug>")
-
 # Global includes. Used by all targets
 # Note:
 #   - header can be included by C++ code `#include <foo/foo.h>`
